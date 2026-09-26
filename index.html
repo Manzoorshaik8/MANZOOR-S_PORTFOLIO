@@ -1446,6 +1446,71 @@ footer{background:#000;border-top:1px solid var(--glass-border);padding:80px 0 3
   .about-badge-center{font-size:1.15rem;}
   .metric-num{font-size:1.4rem;}
 }
+/* ==========================================
+   MOBILE — PREVENT HORIZONTAL SIDE SCROLL
+   ========================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent sections/elements from creating
+   extra width outside the mobile viewport */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Keep major page containers inside viewport */
+section,
+header,
+footer,
+nav,
+main,
+.container {
+  max-width: 100%;
+}
+
+/* Prevent images, videos and iframes from
+   becoming wider than the screen */
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* Mobile-specific protection */
+@media (max-width: 1080px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Prevent transformed/animated elements
+     from creating horizontal page overflow */
+  section,
+  .hero,
+  .mobile-menu,
+  .container {
+    max-width: 100vw;
+  }
+
+  /* Make sure mobile menu itself never
+     becomes wider than the viewport */
+  .mobile-menu {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
 </style>
 </head>
 <body>
@@ -1806,6 +1871,7 @@ footer{background:#000;border-top:1px solid var(--glass-border);padding:80px 0 3
         <video
           class="mg-video"
           src="mg-01.mp4"
+		  poster="mg-01.webp"
           preload="metadata"
           muted
           loop
@@ -1824,6 +1890,7 @@ footer{background:#000;border-top:1px solid var(--glass-border);padding:80px 0 3
         <video
           class="mg-video"
           src="mg-02.mp4"
+		  poster="mg-02.webp"
           preload="metadata"
           muted
           loop
@@ -1842,6 +1909,7 @@ footer{background:#000;border-top:1px solid var(--glass-border);padding:80px 0 3
         <video
           class="mg-video"
           src="mg-03.mp4"
+		  poster="mg-03.webp"
           preload="metadata"
           muted
           loop
@@ -1860,6 +1928,7 @@ footer{background:#000;border-top:1px solid var(--glass-border);padding:80px 0 3
         <video
           class="mg-video"
           src="mg-04.mp4"
+		  poster="mg-05.webp"
           preload="metadata"
           muted
           loop
